@@ -103,10 +103,22 @@ export interface CardData {
   reviewer?: ReporterInfo;
   reportedAt?: string;
   llmSuggestions?: string[];
-  status?: "To Do" | "In Progress" | "Done";
+  status?: "To Do" | "In Progress" | "Done" | "Fix Deployed & Locked";
   voiceNoteUrl?: string;
   hadVoiceNote?: boolean;
   columnId?: string;
+  ledgerLock?: {
+    isLocked: boolean;
+    blockIndex: number;
+    blockId: string;
+    ledgerHash?: string;
+    lockedByName?: string;
+    lockedAt: string;
+    lockedByBadge: string;
+    lockedByRole: string;
+    fiveWhysRca: string[];
+    engineeringFix: string;
+  };
   createdAt?: string | Date;
   updatedAt?: string | Date;
 }

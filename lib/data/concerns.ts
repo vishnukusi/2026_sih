@@ -263,7 +263,10 @@ export async function saveBoard(board: ColumnData[]): Promise<void> {
             $set: {
               ...card,
               columnId: col.id,
-              status: col.title as "To Do" | "In Progress" | "Done",
+              status:
+                card.status === "Fix Deployed & Locked"
+                  ? "Fix Deployed & Locked"
+                  : (col.title as "To Do" | "In Progress" | "Done"),
               updatedAt: new Date(),
             },
           },
@@ -388,8 +391,6 @@ function buildCardFromPayload(payload: WorkerConcernPayload, indexOffset: number
     analyzed_at: payload.analyzed_at || new Date().toISOString(),
     duplicateFingerprint: payload.duplicateFingerprint,
     reportedAt: formattedTime,
-    voiceNoteUrl: payload.voiceNoteUrl,
-    hadVoiceNote: Boolean(payload.voiceNoteUrl),
     reporter:
       typeof payload.reporter === "object" && payload.reporter
         ? {
@@ -420,6 +421,8 @@ function buildCardFromPayload(payload: WorkerConcernPayload, indexOffset: number
     columnId: "col-1",
     createdAt: new Date().toISOString(),
     llmSuggestions: payload.llmSuggestions,
+    voiceNoteUrl: payload.voiceNoteUrl,
+    hadVoiceNote: Boolean(payload.voiceNoteUrl),
   };
 }
 

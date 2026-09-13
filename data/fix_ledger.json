@@ -1,0 +1,142 @@
+[
+  {
+    "_id": "6a9fafb2820e354de03653ad",
+    "blockIndex": 0,
+    "blockId": "BLK-OIL-2026-0000",
+    "concernId": "GENESIS-OIL-000",
+    "previousBlockHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "timestamp": "2026-08-15T00:00:00.000Z",
+    "incidentPayload": {
+      "concernId": "GENESIS-OIL-000",
+      "title": "OIL India Safety Protocol - Zero SIF Genesis Baseline",
+      "hazard": "Systemic Oilfield Safety Architecture Baseline",
+      "failedBarrier": "None (System Foundation)",
+      "observation": "Initialization of the OIL India DGMS/OSHA Compliant Tamper-Proof FixLedger knowledge base.",
+      "sifScore": 0,
+      "iogpRule": "Corporate Safety Baseline",
+      "station": "Duliajan Corporate HSE Directorate",
+      "reportedAt": "Aug 15, 2026 • 00:00 IST",
+      "reporterBadgeId": "OIL-DIR-001"
+    },
+    "rcaFiveWhys": [
+      "Why 1: Regulatory bodies (DGMS / OSHA) require immutable proof of engineering hazard mitigation.",
+      "Why 2: Traditional databases allow unverified row overwrites, risking liability cover-ups.",
+      "Why 3: Previous audit trails lacked cryptographic mathematical linkage between incident and fix.",
+      "Why 4: Management requires verifiable zero-trust transparency before approving rig operations.",
+      "Why 5: Core Mandate: Establish an append-only, SHA-256 tamper-proof ledger for all SIF precursors."
+    ],
+    "approvedEngineeringFix": "Deploy FixLedger cryptographically sealed data lock architecture on top of MongoDB with SHA-256 payload derivation.",
+    "auditorId": "OIL-DIR-001",
+    "auditorName": "OIL Corporate HSE Directorate",
+    "auditorRole": "Executive Director (Corporate HSE)",
+    "status": "Fix Deployed & Locked",
+    "ledger_hash": "75fdae9d9d6d47c9ec21fe32fb79628287c0a672f2506932884bc6fdf175c443",
+    "effectivenessAudits": [
+      {
+        "auditId": "AUDIT-GENESIS-01",
+        "parentBlockHash": "75fdae9d9d6d47c9ec21fe32fb79628287c0a672f2506932884bc6fdf175c443",
+        "auditedAt": "2026-08-16T10:00:00.000Z",
+        "inspectorBadgeId": "OIL-MGR-1002",
+        "inspectorName": "Priyanka Bora",
+        "station": "Duliajan HQ",
+        "effectivenessScore": "Effective",
+        "auditFindings": "Genesis cryptographic parameters verified across Moran and Naharkatiya field nodes.",
+        "transactionHash": "999fb74681fd9e8db116ae261c7557b0b0349d78653732cbf02e3009175e6be8"
+      }
+    ]
+  },
+  {
+    "_id": "6a9fafe228091a819aecfff9",
+    "blockId": "BLK-OIL-2026-0001",
+    "approvedEngineeringFix": "Retrofit overhead certified stainless-steel rigid rail lifeline system with dual-carabiner 3M DBI-SALA SRLs.",
+    "auditorId": "OIL-MGR-1002",
+    "auditorName": "Priyanka Bora",
+    "auditorRole": "Chief General Manager (Process Safety & SIF Control)",
+    "blockIndex": 1,
+    "concernId": "worker-concern-1788848273321",
+    "effectivenessAudits": [
+      {
+        "auditId": "AUDIT-BLK-OIL-2026-0001-422891",
+        "parentBlockHash": "ba39bda30304f5fe35d53474d7cdfb8b1850f44a9d680c1280b1653cc05f2c32",
+        "auditedAt": "2026-09-08T06:53:42.891Z",
+        "inspectorBadgeId": "OIL-INSP-552",
+        "inspectorName": "Lav Kumar",
+        "station": "Moran Rig #04",
+        "effectivenessScore": "Effective",
+        "auditFindings": "Physical site inspection confirmed dual SRLs installed on monkey board. Pull-test passed at 15 kN.",
+        "transactionHash": "53c6273aced71ee5ef0b9143c69cde4f0350cbbf86bca68158114282713127b2"
+      }
+    ],
+    "incidentPayload": {
+      "concernId": "worker-concern-1788848273321",
+      "title": "Working at Heights � Derrick Mast Fall Hazard",
+      "hazard": "Working at Heights",
+      "failedBarrier": "Fall Arrest Harness",
+      "observation": "Derrickman unhooked lanyard while shifting monkey board at 15m",
+      "sifScore": 85,
+      "iogpRule": "Work at Height (Rule #1)",
+      "station": "Moran Rig #04 � Wellhead Section",
+      "reportedAt": "Sep 08, 2026 � 12:00 IST",
+      "reporterBadgeId": "OIL-FLD-5542"
+    },
+    "ledger_hash": "ba39bda30304f5fe35d53474d7cdfb8b1850f44a9d680c1280b1653cc05f2c32",
+    "previousBlockHash": "75fdae9d9d6d47c9ec21fe32fb79628287c0a672f2506932884bc6fdf175c443",
+    "rcaFiveWhys": [
+      "Why 1: Derrickman unclipped safety harness lanyard while traversing monkey board at 15m elevation.",
+      "Why 2: Single lanyard setup lacked continuous 100% tie-off dual-hook configuration.",
+      "Why 3: PTW checklist did not enforce dual-carabiner SRL requirement for monkey board operations.",
+      "Why 4: Rig superintendent toolbox talk did not inspect tether certs prior to shift.",
+      "Why 5: Absence of automated interlocked overhead inertia-reel safety track along derrick beam."
+    ],
+    "status": "Fix Deployed & Locked",
+    "timestamp": "2026-09-08T06:53:22.392Z",
+    "_isSimulatedTamper": true,
+    "_originalPayloadBackup": {
+      "concernId": "worker-concern-1788848273321",
+      "title": "Working at Heights � Derrick Mast Fall Hazard",
+      "hazard": "Working at Heights",
+      "failedBarrier": "Fall Arrest Harness",
+      "observation": "Derrickman unhooked lanyard while shifting monkey board at 15m",
+      "sifScore": 85,
+      "iogpRule": "Work at Height (Rule #1)",
+      "station": "Moran Rig #04 � Wellhead Section",
+      "reportedAt": "Sep 08, 2026 � 12:00 IST",
+      "reporterBadgeId": "OIL-FLD-5542"
+    },
+    "_tamperedField": "sifScore"
+  },
+  {
+    "_id": "6a9fb08928091a819aed0009",
+    "blockId": "BLK-OIL-2026-0002",
+    "approvedEngineeringFix": "Install SIL-2 optical infrared gas detectors with hardwired 2-out-of-3 voting logic to emergency vent ESDVs and automated defeat time-out trips.",
+    "auditorId": "OIL-MGR-1002",
+    "auditorName": "Priyanka Bora",
+    "auditorRole": "Chief General Manager (Process Safety & SIF Control)",
+    "blockIndex": 2,
+    "concernId": "worker-concern-1788848273322",
+    "effectivenessAudits": [],
+    "incidentPayload": {
+      "concernId": "worker-concern-1788848273322",
+      "title": "H2S Toxic Gas Alarm Loop Telemetry Bypass",
+      "hazard": "Toxic H2S / Flammable Gas Exposure",
+      "failedBarrier": "Fixed Gas Detection Telemetry & Emergency Vent Shutdown",
+      "observation": "H2S sensor bypass jumper found on GGS-1 header during shift change",
+      "sifScore": 92,
+      "iogpRule": "Bypassing Safety Controls (Rule #6)",
+      "station": "Duliajan GGS-1 � Gas Processing",
+      "reportedAt": "Sep 08, 2026 � 12:15 IST",
+      "reporterBadgeId": "OIL-FLD-5542"
+    },
+    "ledger_hash": "586e6cbf0b376fee2d4fbcd00df05eba8569758ca1749c82a11e3cc82b71c286",
+    "previousBlockHash": "ba39bda30304f5fe35d53474d7cdfb8b1850f44a9d680c1280b1653cc05f2c32",
+    "rcaFiveWhys": [
+      "Why 1: Atmospheric H2S alarm was suppressed via physical bypass jumper.",
+      "Why 2: Nuisance trip during pipeline pigging caused operator to bypass loop.",
+      "Why 3: No Management of Change (MOC) or temporary defeat register logged.",
+      "Why 4: Supervisory audit failed to cross-check bypass status on DCS panel.",
+      "Why 5: Lack of automated fail-safe countdown interlocks on safety-critical overrides."
+    ],
+    "status": "Fix Deployed & Locked",
+    "timestamp": "2026-09-08T06:56:09.802Z"
+  }
+]

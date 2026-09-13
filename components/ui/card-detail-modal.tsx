@@ -24,6 +24,7 @@ import {
   CompactProfileCard,
   type SocialLink,
 } from "./animated-profile-card";
+import { RcaFiveWhysSection } from "./rca-five-whys-section";
 
 interface CardDetailModalProps {
   card: CardData | null;
@@ -517,6 +518,19 @@ export function CardDetailModal({
                       Physical / Administrative Defense Compromised
                     </span>
                   </div>
+                </div>
+
+                {/* 4. Root Cause Analysis (5 Whys) & Cryptographic Lock */}
+                <div className="space-y-2 mt-6">
+                  <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-800">
+                      ROOT CAUSE ANALYSIS & SEAL
+                    </h3>
+                  </div>
+                  <RcaFiveWhysSection
+                    card={card}
+                    currentManager={currentManager}
+                  />
                 </div>
 
                 {/* Corrective Actions & Recommendations (Clean White Enterprise Card) */}
