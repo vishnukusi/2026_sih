@@ -1,0 +1,52 @@
+# ILLUSTRATIVE DEMO DATA — NOT ACTUAL OIL OPERATIONAL DATA
+report_text,location,activity,equipment,report_type,date
+"Floorman observed working at monkey board 28 meters above ground without securing safety harness lanyard to anchor point.",Moran Rig #04,Derrick Operations,Monkey Board M-01,Unsafe Act,Sep 01 2026
+"Permit to work expired 45 minutes prior to cold cutting pipeline spool piece; work continued without gas testing.",Naharkatiya OCS-1,Pipe Spool Replacement,Line Cut Tool CT-02,Unsafe Condition,Sep 01 2026
+"Electrical maintenance technician initiated MCC panel breaker servicing without applying lock-out tag-out padlock or verifying zero voltage.",Duliajan Central GGS,Substation Switchgear Maintenance,MCC Breaker B-104,Unsafe Act,Sep 01 2026
+"Hydrocarbon vapor detector calibrated improperly; technician bypassed high LEL alarm interlock on control panel.",Digboi Field Station,Gas Dehydration Unit,LEL Sensor SN-402,Unsafe Act,Sep 02 2026
+"Crane operator hoisted 3.2-ton drill collar over active driller cabin while two roustabouts stood directly in drop zone.",Moran Rig #04,Rig Floor Pipe Handling,Mobile Crane CR-07,Unsafe Act,Sep 02 2026
+"Scaffolding erected adjacent to mud pit missing mid-rails and toe-boards; wooden planks unsecured during rain.",Kusijan Wellhead 14,Mud Tank Inspection,Modular Scaffold SC-09,Unsafe Condition,Sep 02 2026
+"Confined space entry into crude oil storage vessel Tank-03 undertaken without atmospheric gas test or standby entrant watch.",Naharkatiya OCS-1,Tank Bottom Sludge Cleanout,Storage Tank TK-03,Unsafe Act,Sep 03 2026
+"Hot work welding on header pipe conducted within 6 meters of open atmospheric vent valve V-104 without fire watch.",Duliajan Central GGS,Manifold Fabrication,Welding Generator W-12,Unsafe Act,Sep 03 2026
+"Field service pickup vehicle driven at 65 km/h on gravel wellhead road exceeding 30 km/h posted limit without driver seatbelt.",Kumchai Gas Field,Field Well Inspection,Toyota Hilux AS-06-E-4421,Unsafe Act,Sep 03 2026
+"Hydraulic pressure line on iron roughneck rated for 3000 PSI found with worn outer braid and leak near operator station.",Moran Rig #04,Drilling Assembly Makeup,Iron Roughneck IR-02,Unsafe Condition,Sep 04 2026
+"Contractor entered compressor station skids carrying non-intrinsically safe personal smartphone in designated Zone 1 hazardous area.",Duliajan Central GGS,Compressor Skids,Gas Compressor C-201,Unsafe Act,Sep 04 2026
+"Webbing sling used on 1.8-ton mud motor lift exhibited visible tears and missing inspection certification tag.",Shalmari GGS,Mud Motor Offloading,Synthetic Sling SL-04,Unsafe Condition,Sep 04 2026
+"Safety valve bypass valve left cracked open following pressure relief maintenance on separator unit V-201.",Naharkatiya OCS-1,Separator Overhaul,Separator V-201,Unsafe Condition,Sep 05 2026
+"Contractor welder removed grinding wheel safety guard to reach tight fillet weld inside pipeline trench.",Pipeline Corridor 4B,Trunkline Repair,Angle Grinder AG-10,Unsafe Act,Sep 05 2026
+"High-pressure test manifold bled down to 0 PSI verified prior to unbolting hammer union connection on choke line.",Moran Rig #04,Wellhead Pressure Testing,Choke Manifold CM-01,Near Miss,Sep 05 2026
+"Emergency shut-down valve ESDV-101 failed full-stroke closure test due to pneumatic actuator diaphragm leakage.",Tengakhat EPS,Emergency Shutdown System,Valve ESDV-101,Unsafe Condition,Sep 05 2026
+"Scaffold tag indicated Green Status but base jacks were resting on uncompacted mud soil without sole boards.",Digboi Field Station,Crude Distillation Column,Tower Scaffold TS-02,Unsafe Condition,Sep 06 2026
+"Helper stepped across open cellar pit opening when grating was temporarily removed for flowline hookup.",Moran Rig #04,Cellar Pit Operations,Cellar Grating CG-01,Near Miss,Sep 06 2026
+"Nitrogen purging completed and verified 0% hydrocarbon before vessel nozzle unbolting; all flange bolts inspected.",Duliajan Central GGS,Vessel Purge,Scrubber V-102,Near Miss,Sep 06 2026
+"Heavy crude tanker truck driver backed vehicle into loading rack bay without assigned spotter guidance.",Naharkatiya OCS-1,Crude Dispatch Gantries,Tanker Truck AS-01-DD-9102,Unsafe Act,Sep 06 2026
+"Wire rope on monkey board fall arrest system found kinked and frayed along traveling block guide track.",Moran Rig #04,Monkey Board Rigging,Inertia Reel IR-04,Unsafe Condition,Sep 06 2026
+"Mechanical seal leak on high-pressure crude transfer pump P-102 releasing light mist of hydrocarbons into pump shelter.",Naharkatiya OCS-1,Pumping Station,Transfer Pump P-102,Unsafe Condition,Sep 07 2026
+"Technician bypassed high-pressure safety switch PSH-301 with jumper wire to prevent nuisance trip during compressor startup.",Kumchai Gas Field,Gas Gathering Booster,Booster Unit GB-01,Unsafe Act,Sep 07 2026
+"Welding ground clamp attached directly to live fuel gas line rather than workpiece during pipe rack modification.",Duliajan Central GGS,Pipe Rack Expansion,Welding Skid WS-03,Unsafe Act,Sep 07 2026
+"Rig mechanic entered shale shaker hopper enclosure while shaker motors were still energized without LOTO.",Moran Rig #04,Solids Control Servicing,Shale Shaker SK-01,Unsafe Act,Sep 07 2026
+"Portable ladder used to access overhead motor valve was untied at top and placed at improper 55-degree slope angle.",Shalmari GGS,Valve Deck Access,Extension Ladder EL-02,Unsafe Act,Sep 07 2026
+"Crane hook safety latch missing spring mechanism; rigger used cable tie to keep latch closed during casing lift.",Moran Rig #04,Casing Running Operation,Auxiliary Crane Hook H-01,Unsafe Condition,Sep 07 2026
+"Excavation trench dug to depth of 2.1 meters in sandy soil without trench shoring or protective soil benching.",Pipeline Corridor 4B,Pipeline Trenching,Excavator EX-200,Unsafe Condition,Sep 07 2026
+"Oxygen and acetylene cylinders stored together horizontally inside poorly ventilated field utility shed.",Digboi Field Station,Workshop Storage,Gas Cylinder Bank GC-01,Unsafe Condition,Sep 07 2026
+"Worker climbed onto top of crude oil rail tanker dome without hooking full body harness to overhead lifeline wire.",Naharkatiya OCS-1,Rail Gantry Loading,Gantry Lifeline GL-01,Unsafe Act,Sep 07 2026
+"H2S gas detector personal monitor was powered off by field operator claiming battery drain nuisance chirping.",Kumchai Gas Field,Gas Wellhead Pad 04,Personal H2S Monitor PM-88,Unsafe Act,Sep 07 2026
+"Temporary electrical distribution board in wash down area missing earth leakage circuit breaker (ELCB) protection.",Moran Rig #04,Rig Wash Area,Distribution Board DB-03,Unsafe Condition,Sep 07 2026
+"Forklift operator carrying pallet of heavy mud chemicals with load raised 2.5 meters high while traveling forward.",Moran Rig #04,Chemical Warehouse Yard,Forklift FL-05,Unsafe Act,Sep 07 2026
+"Confined space entry permit completed with oxygen measured at 20.9% and continuous forced air ventilation operational.",Naharkatiya OCS-1,Vessel Entry,Dehydrator Vessel D-01,Near Miss,Sep 07 2026
+"Safety pressure relief valve PRV-102 on fuel gas scrubber showed inspection overdue date by 14 months.",Tengakhat EPS,Fuel Gas Treating,Relief Valve PRV-102,Unsafe Condition,Sep 07 2026
+"Two pipefitters entered muddy bell-hole trench beneath suspended 24-inch crude pipe while sideboom crane held load.",Pipeline Corridor 4B,Trunkline Tie-in,Sideboom Crane SB-02,Unsafe Act,Sep 07 2026
+"Winch wire line spooled unevenly on drum with bird-caging visible near swivel socket on BOP lifting hoist.",Moran Rig #04,BOP Handling Crane,Air Winch W-02,Unsafe Condition,Sep 07 2026
+"Flange face protector removed; crew confirmed zero pressure and verified double block and bleed valves tagged before uncoupling.",Naharkatiya OCS-1,Manifold Isolation,Block Valve BV-401,Near Miss,Sep 07 2026
+"Substation battery room ventilation exhaust fan motor burnt out creating hydrogen gas accumulation hazard during charging.",Duliajan Central GGS,Substation Battery Room,Exhaust Fan EF-01,Unsafe Condition,Sep 07 2026
+"Driver of chemical transport tanker failed to chock rear tires when parked on slight incline during chemical unloading.",Kusijan Wellhead 14,Chemical Injection Skid,Acid Tanker Truck AT-02,Unsafe Act,Sep 07 2026
+"Derrick climbing assist counterweight wire rope exhibited severed individual strand at lower sheave wheel.",Moran Rig #04,Derrick Climbing System,Climb Assist CA-01,Unsafe Condition,Sep 07 2026
+"Worker used makeshift steel pipe cheater bar on flange wrench to break stuck 2-inch valve stud bolts.",Digboi Field Station,Piping Modification,Valve V-220,Unsafe Act,Sep 07 2026
+"Fire water monitor FM-03 in crude manifold area found blocked by scaffolding materials and empty chemical drums.",Naharkatiya OCS-1,Crude Manifold Area,Fire Monitor FM-03,Unsafe Condition,Sep 07 2026
+"Overhead crane bridge travel limit switch broken; hoist trolley able to strike physical end bumper stops.",Duliajan Central GGS,Workshop Bay 2,Overhead Crane OC-01,Unsafe Condition,Sep 07 2026
+"Contractor working on pipe rack 4.5 meters above ground tied lanyard to electrical conduit rather than certified beam clamp.",Shalmari GGS,Pipe Rack Maintenance,Electrical Conduit EC-14,Unsafe Act,Sep 07 2026
+"Rig crew stopped drilling operations immediately upon detecting 15 PSI pressure kick on casing annulus.",Moran Rig #04,Drilling Production,Choke Annulus CA-01,Near Miss,Sep 07 2026
+"Combustible wood pallets and greasy rags stacked directly underneath high-temperature crude heater treater burner stack.",Tengakhat EPS,Heater Treater Unit,Heater Treater HT-01,Unsafe Condition,Sep 07 2026
+"Operator attempted to loosen stuck grease nipple on live 5000 PSI high pressure Christmas tree valve with hammer.",Kumchai Gas Field,Wellhead Tree 02,Xmas Tree Valve XTV-01,Unsafe Act,Sep 07 2026
+"Gas testing performed at 3 levels in separator prior to manway entry; attendant logged entrants and verified radio contact.",Duliajan Central GGS,Separator Vessel Overhaul,Separator V-101,Near Miss,Sep 07 2026
+"Lifting crew held pre-lift briefing, secured exclusion zone with red barricade tape, and used tag lines on 4-ton BOP stack.",Moran Rig #04,BOP Stack Movement,Overhead Gantry Crane GC-02,Near Miss,Sep 07 2026
