@@ -97,9 +97,27 @@ const Barcode = ({ value }: { value: string }) => {
   );
 };
 
+const CONFETTI_COLORS = ["#ef4444", "#3b82f6", "#22c55e", "#eab308", "#8b5cf6", "#f97316"];
+
 const ConfettiExplosion = () => {
   const confettiCount = 100;
-  const colors = ["#ef4444", "#3b82f6", "#22c55e", "#eab308", "#8b5cf6", "#f97316"];
+
+  const particles = React.useMemo(() => {
+    return Array.from({ length: confettiCount }).map((_, i) => {
+      // Deterministic pseudo-random seed per index
+      const seed1 = Math.abs(Math.sin(i * 997.13 + 12.34));
+      const seed2 = Math.abs(Math.cos(i * 443.21 + 56.78));
+      const seed3 = Math.abs(Math.sin(i * 123.45 + 98.76));
+      return {
+        left: `${seed1 * 100}%`,
+        top: `${-20 + seed2 * 10}%`,
+        color: CONFETTI_COLORS[i % CONFETTI_COLORS.length],
+        rotate: `${seed3 * 360}deg`,
+        duration: `${2.5 + seed1 * 2.5}s`,
+        delay: `${seed2 * 2}s`,
+      };
+    });
+  }, []);
 
   return (
     <>
@@ -118,16 +136,16 @@ const ConfettiExplosion = () => {
         `}
       </style>
       <div className="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
-        {Array.from({ length: confettiCount }).map((_, i) => (
+        {particles.map((p, i) => (
           <div
             key={i}
             className="absolute w-2 h-4"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${-20 + Math.random() * 10}%`,
-              backgroundColor: colors[i % colors.length],
-              transform: `rotate(${Math.random() * 360}deg)`,
-              animation: `fall ${2.5 + Math.random() * 2.5}s ${Math.random() * 2}s linear forwards`,
+              left: p.left,
+              top: p.top,
+              backgroundColor: p.color,
+              transform: `rotate(${p.rotate})`,
+              animation: `fall ${p.duration} ${p.delay} linear forwards`,
             }}
           />
         ))}
@@ -153,6 +171,8 @@ export interface TicketProps extends React.HTMLAttributes<HTMLDivElement> {
   observation?: string;
   officerBadge?: string;
   officerStation?: string;
+  variant?: "default" | "critical";
+  hasVoiceNote?: boolean;
   onReset?: () => void;
   onViewHistory?: () => void;
 }
@@ -168,6 +188,7 @@ const AnimatedTicket = React.forwardRef<HTMLDivElement, TicketProps>(
       last4Digits = "8237",
       barcodeValue,
       icon,
+      variant = "default",
       title = "Thank you!",
       subtitle = "Your concern has been recorded successfully",
       metaLabel,
@@ -175,6 +196,7 @@ const AnimatedTicket = React.forwardRef<HTMLDivElement, TicketProps>(
       observation,
       officerBadge = "OIL-FLD-5542",
       officerStation = "Moran Rig #04",
+      hasVoiceNote = false,
       onReset,
       onViewHistory,
       ...props
@@ -228,10 +250,35 @@ const AnimatedTicket = React.forwardRef<HTMLDivElement, TicketProps>(
           <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-neutral-100 border-l border-neutral-200/80" />
 
           <div className="p-8 flex flex-col items-center text-center">
-            <div className="p-3 bg-emerald-50 text-emerald-600 rounded-full animate-in zoom-in-50 delay-300 duration-500 ring-4 ring-emerald-500/10">
-              {icon || (
-                <CheckCircleIcon className="w-10 h-10 text-emerald-600 animate-in zoom-in-75 delay-500 duration-500" />
+            <div
+              className={cn(
+                "p-3 rounded-full animate-in zoom-in-50 delay-300 duration-500 ring-4",
+                variant === "critical"
+                  ? "bg-red-50 text-red-600 ring-red-500/15"
+                  : "bg-emerald-50 text-emerald-600 ring-emerald-500/10"
               )}
+            >
+              {icon ||
+                (variant === "critical" ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-10 h-10 text-red-600 animate-in zoom-in-75 delay-500 duration-500"
+                  >
+                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                    <line x1="12" y1="9" x2="12" y2="13" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                  </svg>
+                ) : (
+                  <CheckCircleIcon className="w-10 h-10 text-emerald-600 animate-in zoom-in-75 delay-500 duration-500" />
+                ))}
             </div>
             <h1 className="text-2xl font-bold mt-4 text-neutral-900 tracking-tight">{title}</h1>
             <p className="text-muted-foreground mt-1 text-xs sm:text-sm text-neutral-500">
@@ -270,6 +317,13 @@ const AnimatedTicket = React.forwardRef<HTMLDivElement, TicketProps>(
                 <p className="text-xs italic text-neutral-700 leading-relaxed">
                   &ldquo;{observation}&rdquo;
                 </p>
+              </div>
+            )}
+
+            {hasVoiceNote && (
+              <div className="flex items-center gap-2 p-2.5 px-3.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold text-left">
+                <span className="text-base">🎙️</span>
+                <span>Authentic Spoken Voice Note attached for HSE Manager review</span>
               </div>
             )}
 

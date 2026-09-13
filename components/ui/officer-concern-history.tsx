@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { type CardData, type ColumnData } from "@/lib/concerns";
+import { type CardData, type ColumnData } from "@/types/concerns";
 import { type UserSessionData } from "./auth-form-1";
 import { CardDetailModal } from "./card-detail-modal";
 import { GlassmorphismProfileCard } from "./profile-card-1";
@@ -352,6 +352,11 @@ export function OfficerConcernHistory({ user, onLogNewConcern }: OfficerConcernH
                           <span className="font-mono text-[11px] font-bold text-neutral-800 bg-neutral-100 px-2 py-0.5 rounded border border-neutral-200">
                             REF: #{card.id.slice(-6).toUpperCase()}
                           </span>
+                          {card.voiceNoteUrl && (
+                            <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                              🎙️ Voice Note
+                            </span>
+                          )}
                           <span className="text-xs text-neutral-400">•</span>
                           <span className="text-xs text-neutral-500 font-medium">
                             {card.reportedAt || card.date || "Sep 06, 2026"}
@@ -381,6 +386,24 @@ export function OfficerConcernHistory({ user, onLogNewConcern }: OfficerConcernH
                   {/* Expanded View: Strictly Recommended Actions -> Timeline -> Reviewing Manager */}
                   {isExpanded && (
                     <div className="px-5 pb-5 pt-3 space-y-4 border-t border-neutral-100 bg-neutral-50/40 animate-in fade-in slide-in-from-top-1 duration-200">
+                      {/* Voice Note Audio Memo Player */}
+                      {card.voiceNoteUrl && (
+                        <div className="p-3.5 rounded-xl bg-neutral-900 text-white space-y-2 border border-neutral-800 shadow-2xs">
+                          <div className="flex items-center justify-between">
+                            <span className="text-xs font-bold text-neutral-200 flex items-center gap-1.5">
+                              🎙️ Officer Voice Note Dispatch
+                            </span>
+                            <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800/40">
+                              AUDIO RECORDING
+                            </span>
+                          </div>
+                          <audio
+                            controls
+                            src={card.voiceNoteUrl}
+                            className="w-full h-8 rounded accent-emerald-500"
+                          />
+                        </div>
+                      )}
                       {/* 1. Recommended Actions & Mitigations */}
                       {card.llmSuggestions && card.llmSuggestions.length > 0 && (
                         <div className="space-y-2 pt-1">
@@ -563,7 +586,7 @@ export function OfficerConcernHistory({ user, onLogNewConcern }: OfficerConcernH
           onClose={() => setInspectCardInfo(null)}
           onMoveColumn={() => {}}
           onDeleteCard={() => {}}
-          currentManager={null}
+          currentManager={user}
         />
       )}
     </div>
